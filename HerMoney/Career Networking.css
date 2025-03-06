@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.career-networking-tile {
+    background-color: #6a0dad; /* Purple background */
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.career-networking-tile h2 {
+    margin-bottom: 10px;
+}
+
+.career-networking-tile ul {
+    list-style: none;
+    padding: 0;
+}
+
+.career-networking-tile ul li {
+    margin: 8px 0;
+}
+
+.career-networking-tile a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.career-networking-tile a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #6a0dad;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffdd33;
+}
