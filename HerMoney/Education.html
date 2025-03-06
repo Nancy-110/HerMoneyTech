@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Courses - EmpowerHer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Additional styles for horizontal courses row */
+    .courses-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .course-card {
+      flex: 0 0 auto;
+      width: 300px;
+      background-color: var(--light-bg);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-image {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      position: relative;
+    }
+
+    .course-level {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+    }
+
+    .course-content {
+      padding: 1rem;
+    }
+
+    .course-content button {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Style for the external links container */
+    .course-links {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .course-links a {
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .course-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="Logo.png" alt="Logo" height="70px" width="120px">
+      </div>
+      <nav class="main-nav">
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Home.html#education">Education</a></li>
+          <li><a href="Home.html#jobs">Jobs</a></li>
+          <li><a href="Home.html#network">Network</a></li>
+          <li><a href="loan.html">Loans</a></li>
+          <li><a href="Home.html#finance-management">Finance Management</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html"><button class="btn btn-outline">Log In</button></a>
+        <a href="signup.html"><button class="btn btn-primary">Sign Up</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Explore Courses Section -->
+  <section id="courses" class="education">
+    <div class="container">
+      <h2 class="section-title">Explore More Courses</h2>
+      <div class="courses-grid">
+        <!-- Course Card 1 -->
+        <div class="course-card" data-course-id="1">
+          <div class="course-image" style="background-image: url('budget.jpg');">
+            <span class="course-level">Beginner</span>
+          </div>
+          <div class="course-content">
+            <h4>Budgeting Basics</h4>
+            <p>Manage your budget effectively.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.investopedia.com/articles/personal-finance/091515/budgeting-basics.asp"
+                target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 2 -->
+        <div class="course-card" data-course-id="2">
+          <div class="course-image" style="background-image: url('saving.jpg');">
+            <span class="course-level">Beginner</span>
+          </div>
+          <div class="course-content">
+            <h4>Saving Strategies</h4>
+            <p>Tips to save money wisely.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.nerdwallet.com/blog/finance/saving-tips/" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 3 -->
+        <div class="course-card" data-course-id="3">
+          <div class="course-image" style="background-image: url('investment.jpg');">
+            <span class="course-level">Intermediate</span>
+          </div>
+          <div class="course-content">
+            <h4>Investment Fundamentals</h4>
+            <p>Basics of investing.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.investopedia.com/investing/" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 4 -->
+        <div class="course-card" data-course-id="4">
+          <div class="course-image" style="background-image: url('stockmarket.jpg');">
+            <span class="course-level">Intermediate</span>
+          </div>
+          <div class="course-content">
+            <h4>Stock Market Essentials</h4>
+            <p>Introduction to the stock market.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.investopedia.com/terms/s/stock-market.asp" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 5 -->
+        <div class="course-card" data-course-id="5">
+          <div class="course-image" style="background-image: url('advanced_investment.jpg');">
+            <span class="course-level">Advanced</span>
+          </div>
+          <div class="course-content">
+            <h4>Advanced Investment Strategies</h4>
+            <p>Deep dive into advanced trading.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.investopedia.com/articles/active-trading/072115/top-advanced-investment-strategies.asp"
+                target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 6 -->
+        <div class="course-card" data-course-id="6">
+          <div class="course-image" style="background-image: url('credit.jpg');">
+            <span class="course-level">Beginner</span>
+          </div>
+          <div class="course-content">
+            <h4>Understanding Credit</h4>
+            <p>Learn how credit works.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.experian.com/blogs/ask-experian/credit-basics/" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 7 -->
+        <div class="course-card" data-course-id="7">
+          <div class="course-image" style="background-image: url('debt.jpg');">
+            <span class="course-level">Intermediate</span>
+          </div>
+          <div class="course-content">
+            <h4>Debt Management</h4>
+            <p>Manage and reduce your debt.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.creditkarma.com/advice/i/how-to-get-out-of-debt" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 8 -->
+        <div class="course-card" data-course-id="8">
+          <div class="course-image" style="background-image: url('financila_planning.jpg');">
+            <span class="course-level">Intermediate</span>
+          </div>
+          <div class="course-content">
+            <h4>Financial Planning</h4>
+            <p>Create a personalized plan.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.moneyunder30.com/financial-planning" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 9 -->
+        <div class="course-card" data-course-id="9">
+          <div class="course-image" style="background-image: url('retirement.jpg');">
+            <span class="course-level">Advanced</span>
+          </div>
+          <div class="course-content">
+            <h4>Retirement Planning</h4>
+            <p>Plan for a secure retirement.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.aarp.org/retirement/planning-for-retirement/" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 10 -->
+        <div class="course-card" data-course-id="10">
+          <div class="course-image" style="background-image: url('persoonal_finance.jpg');">
+            <span class="course-level">Beginner</span>
+          </div>
+          <div class="course-content">
+            <h4>Personal Finance 101</h4>
+            <p>Basics of managing finances.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.nerdwallet.com/best/finance/personal-finance-basics" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 11 -->
+        <div class="course-card" data-course-id="11">
+          <div class="course-image" style="background-image: url('real_estate.jpg');">
+            <span class="course-level">Intermediate</span>
+          </div>
+          <div class="course-content">
+            <h4>Real Estate Investing</h4>
+            <p>Fundamentals of property investment.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.investopedia.com/terms/r/realestateinvesting.asp" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 12 -->
+        <div class="course-card" data-course-id="12">
+          <div class="course-image" style="background-image: url('Entrepreneurship.jpg');">
+            <span class="course-level">Advanced</span>
+          </div>
+          <div class="course-content">
+            <h4>Entrepreneurship Essentials</h4>
+            <p>Start and manage your own business.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.entrepreneur.com/topic/entrepreneurship" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 13 -->
+        <div class="course-card" data-course-id="13">
+          <div class="course-image" style="background-image: url('tax.jpg');">
+            <span class="course-level">Intermediate</span>
+          </div>
+          <div class="course-content">
+            <h4>Tax Planning</h4>
+            <p>Plan your finances with tax laws.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.irs.gov/taxtopics/tc503" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 14 -->
+        <div class="course-card" data-course-id="14">
+          <div class="course-image" style="background-image: url('wealth.jpg');">
+            <span class="course-level">Advanced</span>
+          </div>
+          <div class="course-content">
+            <h4>Wealth Management</h4>
+            <p>Strategies for managing your wealth.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.investopedia.com/terms/w/wealth-management.asp" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 15 -->
+        <div class="course-card" data-course-id="15">
+          <div class="course-image" style="background-image: url('banking.jpg');">
+            <span class="course-level">Beginner</span>
+          </div>
+          <div class="course-content">
+            <h4>Introduction to Banking</h4>
+            <p>Basics of banking and financial services.</p>
+            <button class="btn btn-secondary btn-sm">View Details</button>
+            <div class="course-links">
+              <a href="https://www.bankrate.com/banking/" target="_blank">Visit Site</a>
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Course Details -->
+  <div id="courseModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modalTitle">Course Title</h3>
+      <p id="modalDescription">Course description goes here.</p>
+    </div>
+  </div>
+
+  <script>
+    // GPT-generated course details data (simulated)
+    const coursesDetails = {
+      1: {
+        title: "Budgeting Basics",
+        description:
+          "Learn the fundamentals of budgeting, expense tracking, and how to allocate your funds effectively for a secure financial future."
+      },
+      2: {
+        title: "Saving Strategies",
+        description:
+          "Discover innovative saving techniques and methods to build a robust emergency fund while planning for future goals."
+      },
+      3: {
+        title: "Investment Fundamentals",
+        description:
+          "Understand the core principles of investing, risk management, and how different investment vehicles can work for you."
+      },
+      4: {
+        title: "Stock Market Essentials",
+        description:
+          "Gain insights into the stock market basics, trading strategies, and how to analyze market trends effectively."
+      },
+      5: {
+        title: "Advanced Investment Strategies",
+        description:
+          "Dive deep into portfolio diversification, asset allocation, and sophisticated strategies used by professional investors."
+      },
+      6: {
+        title: "Understanding Credit",
+        description:
+          "Learn how credit scores are calculated, the importance of maintaining good credit, and ways to manage your credit effectively."
+      },
+      7: {
+        title: "Debt Management",
+        description:
+          "Explore strategies to reduce and manage debt, including consolidation techniques and budgeting tips to improve your financial health."
+      },
+      8: {
+        title: "Financial Planning",
+        description:
+          "Create a personalized financial plan that aligns with your goals, risk tolerance, and long-term aspirations with expert guidance."
+      },
+      9: {
+        title: "Retirement Planning",
+        description:
+          "Plan for a comfortable retirement by understanding various retirement accounts, saving strategies, and tailored investment options for long-term security."
+      },
+      10: {
+        title: "Personal Finance 101",
+        description:
+          "Master the basics of personal finance, including budgeting, saving, and essential habits for smart money management."
+      },
+      11: {
+        title: "Real Estate Investing",
+        description:
+          "Learn the fundamentals of investing in real estate, property valuation, and market analysis to make informed property investment decisions."
+      },
+      12: {
+        title: "Entrepreneurship Essentials",
+        description:
+          "Everything you need to kickstart your entrepreneurial journey—from ideation and planning to execution and scaling your business."
+      },
+      13: {
+        title: "Tax Planning",
+        description:
+          "Understand tax regulations, deductions, and strategies to optimize your tax liabilities while ensuring compliance with current laws."
+      },
+      14: {
+        title: "Wealth Management",
+        description:
+          "Advanced techniques and strategies for managing, preserving, and growing your wealth through diverse investment channels."
+      },
+      15: {
+        title: "Introduction to Banking",
+        description:
+          "Get introduced to the world of banking, including various financial products, services, and how to navigate the banking system efficiently."
+      }
+    };
+
+    // Function to open modal with course details
+    function openCourseModal(courseId) {
+      const courseData = coursesDetails[courseId];
+      if (courseData) {
+        document.getElementById("modalTitle").innerText = courseData.title;
+        document.getElementById("modalDescription").innerText = courseData.description;
+        document.getElementById("courseModal").style.display = "block";
+      }
+    }
+
+    // Attach click event to each course card
+    document.querySelectorAll(".course-card").forEach((card) => {
+      card.addEventListener("click", function () {
+        const courseId = this.getAttribute("data-course-id");
+        openCourseModal(courseId);
+      });
+    });
+
+    // Modal close functionality
+    document.querySelector(".modal .close").addEventListener("click", function () {
+      document.getElementById("courseModal").style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+      const modal = document.getElementById("courseModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
