@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #8a2be2;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Privacy Policy Section */
+.privacy-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-container h2 {
+    color: #8a2be2;
+    border-left: 5px solid #8a2be2;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.privacy-container a {
+    color: #8a2be2;
+    text-decoration: none;
+}
+
+.privacy-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .privacy-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
