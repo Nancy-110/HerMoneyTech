@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Cookie Policy Page */
+.cookie-policy-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #6a0dad; /* Purple color */
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+}
+
+ul {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #6a0dad;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-banner a {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+.cookie-btn {
+    background: white;
+    color: #6a0dad;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cookie-btn.decline {
+    background: #ff5757;
+    color: white;
+}
+
+.cookie-btn:hover {
+    opacity: 0.8;
+}
