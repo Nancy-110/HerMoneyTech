@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 Final content we want to keep
+=======
+[feature e155fb1] edit in feature branch
+ 1 file changed, 1 deletion(-)
+>>>>>>> 19e52e8 (edit in feature branch)
