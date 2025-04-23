@@ -14,3 +14,10 @@ FinPower is a comprehensive web platform dedicated to empowering women by offeri
 - 🤖 *AI Financial Guidance*
   - AI-based chatbot for financial queries
   - Budget planner, savings goal tracker, and investment simulations
+*Frontend*
+- HTML
+- CSS
+- JavaScript
+
+*Other Tools*
+- Git & GitHub for version control
